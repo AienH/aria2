@@ -41,3 +41,6 @@ sudo sh aria2.sh
 sudo sh shutdown_aria2.sh
 ```
 
+一键脚本安装可参考这个：
+
+- [AutoInstallAria2](https://github.com/Mintimate/AutoInstallAria2)
