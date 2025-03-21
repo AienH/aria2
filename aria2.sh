@@ -21,10 +21,10 @@ if ! command -v screen &>/dev/null; then
   esac
 fi
 
-conf_path=$(conf_path=$(find $HOME -name "aria2.conf" 2>/dev/null))
+conf_path=$(find $HOME -name "aria2.conf" 2>/dev/null)
 # 启动 aria2
 screen -S aria2 -d -m bash -c "aria2c --conf-path="${conf_path}"; exec bash" || { echo "Failed to start Aria2"; exit 1; }
-echo "Minecraft server started successfully"
+echo "Aria2 server started successfully"
 
 # 命令行交互
 while true; do
@@ -32,6 +32,7 @@ while true; do
   case "${answer}" in 
     yes)
       screen -r aria2
+      break
       ;;
     no)
       echo "Exiting..."
